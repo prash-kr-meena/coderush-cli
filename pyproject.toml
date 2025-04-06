@@ -1,0 +1,65 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "coderush-cli"
+version = "0.1.31"
+description = "Engineering Metrics Analysis Tool"
+readme = "README.md"
+authors = [{ name = "Your Name", email = "your.email@example.com" }]
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "PyGithub>=1.55",
+    "requests>=2.31.0",
+    "urllib3>=2.0.7",
+    "chardet>=5.2.0",
+    "idna>=3.6",
+    "certifi>=2023.7.22",
+    "rich>=13.0.0",
+    "rich-click>=1.6.0",
+    "anthropic>=0.18.0",
+    "python-dateutil>=2.8.2",
+    "splitio-client>=9.2.0",
+    "pandas>=2.0.0",
+    "plotly>=5.18.0",
+    "python-dotenv>=1.0.0",
+    "click>=8.0.0",
+    "pyperclip>=1.9.0",
+    "prompt_toolkit>=3.0.48",
+]
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/coderush/coderush-cli"
+Repository = "https://github.com/coderush/coderush-cli"
+
+[project.scripts]
+coderush-cli = "coderush_cli.main:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/coderush_cli"]
+
+[tool.hatch.build]
+include = [
+    "src/coderush_cli/**/*.py",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+    "src"
+]
+testpaths = [
+    "tests"
+]

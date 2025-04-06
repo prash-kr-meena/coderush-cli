@@ -1,0 +1,13 @@
+.DS_store
+reports
+coderush_cli/__pycache__
+dist
+.env
+venv
+coderush_cli.egg-info
+coderush_cli/github/__pycache__
+coderush_cli/commands/__pycache__
+coderush_cli/linear/__pycache__
+**/__pycache__
+**/__pycache__
+/.venv/

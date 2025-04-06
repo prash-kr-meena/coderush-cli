@@ -1,0 +1,5 @@
+include README.md
+include LICENSE
+include src/coderush_cli/__init__.py
+include src/coderush_cli/config.py
+recursive-include src/coderush_cli *.py
